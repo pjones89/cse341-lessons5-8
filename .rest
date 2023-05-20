@@ -1,0 +1,29 @@
+###
+GET http://localhost:8080/movies HTTP/1.1
+###
+POST http://localhost:8080/movies HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Knives Out",
+    "genre": "Mystery",
+    "rating": "PG-13",
+    "releaseYear": "2018",
+    "famousActor": "Daniel Craig"
+}
+###
+
+
+GET https://entertainment-entries.onrender.com/movies HTTP/1.1
+###
+POST https://entertainment-entries.onrender.com/movies HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Knives Out",
+    "genre": "Mystery",
+    "rating": "PG-13",
+    "releaseYear": "2018",
+    "famousActor": "Daniel Craig"
+}
+###

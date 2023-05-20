@@ -1,0 +1,23 @@
+{
+    "movie": {
+        "title": "The Dark Knight",
+        "genre": "Action",
+        "rating": "PG-13",
+        "releaseYear": "2008",
+        "famousActor": "Christian Bale"
+    },
+    "movie2": {
+        "title": "Guardians of the Galaxy: Volume 3",
+        "genre": "Action/Comedy",
+        "rating": "PG-13",
+        "releaseYear": "2023",
+        "famousActor": "Chris Pratt"
+    },
+    "movie3": {
+        "title": "Megamind",
+        "genre": "Animation/Comedy",
+        "rating": "PG",
+        "releaseYear": "2010",
+        "famousActor": "Will Ferrell"
+    }
+}
