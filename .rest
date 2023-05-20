@@ -1,6 +1,8 @@
 ###
 GET http://localhost:8080/movies HTTP/1.1
 ###
+GET http://localhost:8080/movies/6469459cfcd81beb1dd8c16f HTTP/1.1
+###
 POST http://localhost:8080/movies HTTP/1.1
 content-type: application/json
 
@@ -15,6 +17,8 @@ content-type: application/json
 
 
 GET https://entertainment-entries.onrender.com/movies HTTP/1.1
+###
+GET https://entertainment-entries.onrender.com/movies/6469459cfcd81beb1dd8c16f HTTP/1.1
 ###
 POST https://entertainment-entries.onrender.com/movies HTTP/1.1
 content-type: application/json
