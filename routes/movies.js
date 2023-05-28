@@ -9,4 +9,8 @@ router.get('/:id', moviesController.getSingle);
 
 router.post('/', moviesController.createEntry);
 
+router.put('/:id', moviesController.updateEntry);
+
+router.delete('/:id', moviesController.deleteEntry);
+
 module.exports = router;

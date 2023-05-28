@@ -38,8 +38,43 @@ const createEntry = async (req, res) => {
     }
 };
 
+const updateEntry = async (req, res) => {
+    const entryId = new ObjectId(req.params.id);
+    const movie = {
+        title: req.body.title,
+        genre: req.body.genre,
+        rating: req.body.rating,
+        releaseYear: req.body.releaseYear,
+        famousActor: req.body.famousActor
+    };
+    const response = await mongodb
+        .getDb()
+        .db('entertainment')
+        .collection('movies')
+        .replaceOne({ _id: entryId }, movie);
+    console.log(response);
+    if (response.modifiedCount > 0) {
+        res.status(204).send();
+    } else {
+        res.status(500).json(response.error || 'Some error occurred while updating the movie entry.');
+    }
+};
+
+const deleteEntry = async (req, res) => {
+    const entryId = new ObjectId(req.params.id);
+    const response = await mongodb.getDb().db('entertainment').collection('movies').deleteOne({ _id: entryId }, true);
+    console.log(response);
+    if (response.deletedCount > 0) {
+        res.status(204).send();
+    } else {
+        res.status(500).json(response.error || 'Some error occurred while deleting the movie entry.');
+    }
+};
+
 module.exports = {
     getAll,
     getSingle,
-    createEntry
+    createEntry,
+    updateEntry,
+    deleteEntry
 };
